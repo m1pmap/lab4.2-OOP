@@ -17,7 +17,6 @@ int main()
     std::ifstream file("D:\\2 КУРС\\3 СЕМЕСТР\\ООП\\Лабораторная 4\\lab4.2\\txt.txt");
 
     cout << "File:" << endl;
-
     std::string line;
     int line_number = 1;
     while (std::getline(file, line)) {
@@ -29,9 +28,8 @@ int main()
         cout << pair.second << '\n';
 
     cout << "\nBinary system:" << endl;
-
     for (auto pair : container) {
-        std::bitset<8> binary(std::stoi(pair.second, nullptr, 16));
-        std::cout << binary.to_string() << endl;
+        bitset<8> binary(std::stoi(pair.second, nullptr, 16));
+        cout << binary.to_string() << endl;
     }
 }
